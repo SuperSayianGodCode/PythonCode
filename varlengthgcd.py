@@ -24,5 +24,5 @@ def gcd(a,b):
 #        print("len(b):",len(b))
         return gcd(b[0],b[1:])
         
-        
-print(gcd(3,[4,29,64,11,73]))
+arr=[3,4,29,64,11,73]       
+print(gcd(arr[0],arr[1:]))
