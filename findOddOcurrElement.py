@@ -23,3 +23,26 @@ for key, value in dict.items():
 
 print(oddOcurr)
 
+##################################################################################################3
+
+import numpy as np
+oddOcurr=[] 
+occurCount={}
+arr=np.array([0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3])
+visited=np.array([False for i in range(len(arr))])
+for i in range(len(arr)):
+    for j in range(len(arr)):
+        if (arr[i]==arr[j] and visited[j]==False):
+            if (arr[j] in occurCount):
+                occurCount[arr[j]]+=1
+            else:
+                occurCount[arr[j]]=1
+            visited[j]=True   
+        else:
+            continue
+            
+print(occurCount)
+
+for key in occurCount:
+    if occurCount[key]%2!=0:
+       print(key,": ",occurCount[key])
