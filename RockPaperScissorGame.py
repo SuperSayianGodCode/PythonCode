@@ -12,7 +12,7 @@ options=["Rock", "Paper", "Scissors"]
 
 while True:
     #assign a random move to the computer
-    computerturn = options[randint(0,len(options)-1)].lower()
+    computerturn = options[randint(0,len(options))].lower()
     #ask user to input their move
     player = input("Rock, Paper, Scissors?").strip().lower()
     if player==computerturn:
